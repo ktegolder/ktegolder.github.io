@@ -1,3 +1,30 @@
+h1{
+    text-align: center
+}
+
 p{
     font-family: "Monaco", Monospace;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+.row img {
+    max-width: 69%;
+    height: auto;
+}
+.text {
+    max-width: 42%;
+}
+.reverse {
+    flex-direction: row-reverse;
 }
