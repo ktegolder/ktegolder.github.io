@@ -1,29 +1,117 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Art Gallery</title>
-  <h1>Checkout my Wanderful Works of Art</h1>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div style="width: 500px; margin: 0 auto;">
+    <header>
+        <h1>Katie Golder</h1>
+        <nav>
+            <ul>
+                <li><button class="filter-btn" data-category="all">All</button></li>
+                <li><button class="filter-btn" data-category="physical">Physical Art</button></li>
+                <li><button class="filter-btn" data-category="digital">Digital Art</button></li>
+                <li><button class="filter-btn" data-category="pixel">Pixel Art</button></li>
+            </ul>
+        </nav>
+    </header>
 
-    <img src="Art/BoxLost.jpeg" id="BoxLost">
-    <p><label for="BoxLost">Box Lost - 2021</label><p> <br>
-    <p><label for="CoralDock">Coral Dock</label></p>
-    <img src="Art/CoralDock.jpeg" id="CoralDock"><br>
-    <img src="Art/FairlySpring.jpeg">
-    <p><label for="FairlySpring">Fairly Spring</label></p><br>
-    <p><label for="Fox">Fox</label></p>
-    <img src="Art/Fox.jpeg"><br>
-    <img src="Art/NoIdealTime.jpeg">
-    <p><label for="No Ideal Time">No Ideal Time</label></p><br>
-    <p><label for="Stinker">Stinker</label></p>
-    <img src="Art/Stinker.jpeg">
-    
+    <section id="portfolio">
+        <div class="portfolio-item" data-category="physical" data-title="Box Lost" 
+        data-description="My sister moves alot while posing"
+        data-medium="Charcoal and colored pencil on newsprint paper"
+        data-year="2021"
+        data-purpose="Figure drawing in High School art class">
+            <img src="Art/BoxLost.jpeg" alt="Box Lost">
+            <p>Box Lost</p>
+        </div>
+
+        <div class="portfolio-item" data-category="physical" data-title="Fairly Spring" 
+        data-description="An attempt at abstract painting from the prompt of Spring"
+        data-medium="Acrylic on canvas"
+        data-year="2023"
+        data-purpose="For fun and to try paining without a plan">
+            <img src="Art/FairlySpring.jpeg" alt="Fairly Spring">
+            <p>Fairly Spring</p>
+        </div>
+
+
+        <div class="portfolio-item" data-category="physical" data-title="No Ideal Time" 
+        data-description="This became a good test of reflection"
+        data-medium="Acrylic on canvas"
+        data-year="2022"
+        data-purpose="For my Uncle">
+            <img src="Art/NoIdealTime.jpeg" alt="No Ideal Time">
+            <p>No Ideal Time</p>
+        </div>
+
+        <div class="portfolio-item" data-category="design" data-title="Stinker" 
+        data-description="It is a fitting name for a cat"
+        data-medium="Acrylic on canvas"
+        data-year="2022"
+        data-purpose="For my Sister">
+            <img src="Art/Stinker.jpeg" alt="Stinker">
+            <p>Stinker</p>
+        </div>
+
+        <div class="portfolio-item" data-category="digital" data-title="LetsGo" 
+        data-description="Drawn from referenceing people walking by"
+        data-medium="Procreate"
+        data-year="2022"
+        data-purpose="For practice and fun">
+            <img src="Art/LetsGo.jpg" alt="Let's Go">
+            <p>Let's Go</p>
+        </div>
+        
+        <div class="portfolio-item" data-category="physical" data-title="Coral Dock" 
+        data-description="Inspired by The Legend of Zelda Breath of the Wild clipping"
+        data-medium="Acrylic on canvas"
+        data-year="2023"
+        data-purpose="For fun">
+            <img src="Art/CoralDock.jpeg" alt="Coral Dock">
+            <p>Coral Dock</p>
+        </div>
+
+        <div class="portfolio-item" data-category="physical" data-title="Fox" 
+        data-description="A page from Brer Rabbit"
+        data-medium="Pencil and ink on book paper"
+        data-year="2021"
+        data-purpose="High School art class">
+            <img src="Art/Fox.jpeg" alt="Fox">
+            <p>Fox</p>
+        </div>
+
+        <div class="portfolio-item" data-category="digital" data-title="AstroAnywhere" 
+        data-description="Studying rocky background shading made fun"
+        data-medium="Procreate"
+        data-year="2022"
+        data-purpose="For practice and fun">
+            <img src="Art/AstroAnywhere.jpg" alt="AstroAnywhere">
+            <p>Astro Anywhere</p>
+        </div>
+
+    </section>
+
+    <!-- Modal structure for item details -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2 id="modal-title"></h2>
+          <img id="modal-image" src="" alt="">
+          <p id="modal-description"></p>
+          <!-- New additional information fields -->
+          <div id="modal-details">
+              <p><strong>Medium:</strong> <span id="modal-medium"></span></p>
+              <p><strong>Year:</strong> <span id="modal-year"></span></p>
+              <p><strong>Purpose:</strong> <span id="modal-purpose"></span></p>
+          </div>
+      </div>
   </div>
 
-<div class="container" id="content"></div>
-<script src="gallery.js"></script>
+    <script src="script.js"></script>
 </body>
+</html>
