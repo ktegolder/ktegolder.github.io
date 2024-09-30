@@ -25,6 +25,15 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+    // Automatically add arrow icon next to each portfolio item name
+    portfolioItems.forEach(item => {
+        const titleElement = item.querySelector('p');
+        const arrowIcon = document.createElement('img');
+        arrowIcon.src = 'moreInfo.png';
+        arrowIcon.alt = 'Arrow icon';
+        arrowIcon.classList.add('arrow-icon');
+        titleElement.appendChild(arrowIcon); // Add the arrow icon to the name
+    });
 
     // Open modal when a portfolio item is clicked
     portfolioItems.forEach(item => {
