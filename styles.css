@@ -57,11 +57,28 @@ nav ul li {
 .portfolio-item img {
     max-width: 100%;
     border-bottom: 1px solid #ddd;
+    display: block;
+    border: none; /* Ensure no borders are added by the browser */
 }
 
 .portfolio-item p {
     margin: 1rem;
     font-size: 1.2rem;
+    display: flex;
+    align-items: center; /* Align text and icon vertically */
+    justify-content: center;
+}
+
+.arrow-icon {
+    margin-left: 8px; /* Add spacing between the text and the arrow */
+    width: 16px; /* Set width for the icon */
+    height: 16px; /* Set height for the icon */
+    vertical-align: middle; /* Vertically align with the text */
+}
+
+.portfolio-item:hover .arrow-icon {
+    transform: translateX(5px); /* Move arrow slightly on hover */
+    transition: transform 0.3s ease;
 }
 
 /* Existing styles */
